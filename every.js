@@ -6,7 +6,7 @@ export const aEvery = (arr) => {
     }
   };
 
-  for (let i = 0; i < arr.length; i++) {
+  for (const i of arr) {
     fc(arr[i]);
   }
 
