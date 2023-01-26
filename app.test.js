@@ -2,6 +2,7 @@ import { aLength } from "./length.js";
 import { aPush } from "./push.js";
 import { aPop } from "./pop.js";
 import { aUnshift } from "./unshift.js";
+import { aShift } from "./shift.js";
 describe("Given aLength function", () => {
   describe("when We have an array", () => {
     test("Then length of [1,2,3] should be 3", () => {
@@ -40,6 +41,14 @@ describe("Given aUnshift function", () => {
     test("Then array [1,2,3] should return 4", () => {
       const r = aUnshift([1, 2, 3]);
       expect(r).toEqual(4);
+    });
+  });
+});
+describe("Given aShift function", () => {
+  describe("when we have an array of three items", () => {
+    test("Then array [1,2,3] should return 1", () => {
+      const r = aShift([1, 2, 3]);
+      expect(r).toEqual(1);
     });
   });
 });
