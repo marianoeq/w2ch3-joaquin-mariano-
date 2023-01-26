@@ -1,2 +1,4 @@
-// Import { aLength } from "./length.js";
-// Import { aPush } from "./push.js";
+export const aUnshift = (arr, item) => {
+  const newArr = [item, ...arr];
+  return newArr.length;
+};
