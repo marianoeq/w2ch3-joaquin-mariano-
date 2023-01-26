@@ -1,8 +1,9 @@
 import { aLength } from "./length.js";
 import { aPush } from "./push.js";
 import { aPop } from "./pop.js";
+import { aUnshift } from "./unshift.js";
 describe("Given aLength function", () => {
-  describe("We have an array", () => {
+  describe("when We have an array", () => {
     test("Then length of [1,2,3] should be 3", () => {
       const r = aLength([]);
       expect(r).toEqual(0);
@@ -15,7 +16,7 @@ describe("Given aLength function", () => {
 });
 
 describe("Given aPush function", () => {
-  describe("We have an array", () => {
+  describe("when We have an array", () => {
     test("Then length of array 3 should be 4", () => {
       const r = aPush([1, 2, 3], 4);
       expect(r).toEqual(4);
@@ -31,6 +32,14 @@ describe("Given aPop function", () => {
     test("Then array [1,2,3] should return 3", () => {
       const r = aPop([1, 2, 3]);
       expect(r).toEqual(3);
+    });
+  });
+});
+describe("Given aUnshift function", () => {
+  describe("when we have an array of three items", () => {
+    test("Then array [1,2,3] should return 4", () => {
+      const r = aUnshift([1, 2, 3]);
+      expect(r).toEqual(4);
     });
   });
 });
