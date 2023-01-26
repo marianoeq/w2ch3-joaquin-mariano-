@@ -3,6 +3,8 @@ import { aPush } from "./push.js";
 import { aPop } from "./pop.js";
 import { aUnshift } from "./unshift.js";
 import { aShift } from "./shift.js";
+import { aSome } from "./some.js";
+import { aEvery } from "./every.js";
 describe("Given aLength function", () => {
   describe("when We have an array", () => {
     test("Then length of [1,2,3] should be 3", () => {
@@ -49,6 +51,24 @@ describe("Given aShift function", () => {
     test("Then array [1,2,3] should return 1", () => {
       const r = aShift([1, 2, 3]);
       expect(r).toEqual(1);
+    });
+  });
+});
+describe("Given aSome function", () => {
+  describe("when we have an array and a condition which test if some element is even", () => {
+    test("Then array [1,2,3] should return true", () => {
+      const arr = [1, 2, 3];
+      const r = aSome(arr);
+      expect(r).toEqual(true);
+    });
+  });
+});
+describe("Given aEvery function", () => {
+  describe("when we have an array and a condition which an element is minor than 40", () => {
+    test("Then array [1,2,3,39] should return true", () => {
+      const arr = [1, 2, 3, 39];
+      const r = aEvery(arr);
+      expect(r).toEqual(true);
     });
   });
 });
